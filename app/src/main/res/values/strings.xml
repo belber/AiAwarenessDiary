@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI觉察日记</string>
+    <string name="tab_awareness">觉察</string>
+    <string name="tab_review">回顾</string>
+    <string name="tab_settings">设置</string>
+    <string name="prompt_placeholder">此刻，你在想什么？</string>
+    <string name="save">保存</string>
+    <string name="today_records">今日已记录 %d 次</string>
+</resources>
