@@ -72,8 +72,7 @@ val AppTypography = Typography(
         fontFamily = BodyFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
-        lineHeight = 18.sp,
-        color = TextSecondary
+        lineHeight = 18.sp
     ),
     labelLarge = TextStyle(
         fontFamily = BodyFontFamily,

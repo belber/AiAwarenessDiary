@@ -21,17 +21,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.aiawareness.diary.ui.theme.JournalTokens
 
-private val Icons.AutoMirrored: AutoMirroredIcons
-    get() = AutoMirroredIcons
-
-private object AutoMirroredIcons {
-    val Rounded = AutoMirroredRoundedIcons
-}
-
-private object AutoMirroredRoundedIcons {
-    val ArrowBack: ImageVector
-        get() = Icons.Rounded.ArrowBack
-}
+private fun editorialBackArrowIcon(): ImageVector = Icons.Rounded.ArrowBack
 
 @Composable
 fun EditorialTopBar(
@@ -42,7 +32,7 @@ fun EditorialTopBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-                    .padding(
+            .padding(
                 horizontal = JournalTokens.ScreenPadding,
                 vertical = 16.dp
             ),
@@ -53,7 +43,7 @@ fun EditorialTopBar(
             if (onBack != null) {
                 FilledTonalIconButton(onClick = onBack) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
+                        imageVector = editorialBackArrowIcon(),
                         contentDescription = "返回"
                     )
                 }
