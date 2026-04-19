@@ -13,8 +13,15 @@
     <string name="privacy_policy_about_entry_subtitle">了解本地存储、第三方服务传输与监控说明</string>
     <string name="privacy_policy_fallback_reason_no_url">当前尚未配置线上隐私政策链接，以下为应用内置版本。</string>
     <string name="privacy_policy_fallback_reason_load_failed">线上隐私政策加载失败，以下为应用内置版本。</string>
-    <string name="privacy_policy_consent_message">继续使用前，请先阅读并同意隐私政策。应用会在你同意后启用 Aliyun APM 监控；如果你配置第三方 AI 或对象存储服务，所选数据也会直接发送到相应服务。</string>
-    <string name="privacy_policy_view_action">查看隐私政策</string>
-    <string name="privacy_policy_agree_action">同意并继续</string>
-    <string name="privacy_policy_disagree_action">不同意并退出</string>
+    <string name="privacy_consent_title">隐私说明</string>
+    <string name="privacy_consent_intro">继续使用前，请先确认数据如何保存、AI 如何调用，以及哪些运行信息会用于改进 APP。</string>
+    <string name="privacy_consent_section_local_heading">内容默认保存在本地</string>
+    <string name="privacy_consent_section_local_body">你的日记、图片和设置默认只保存在本机。应用没有开发者自建服务端，不会收集或上传你的日记等用户内容。</string>
+    <string name="privacy_consent_section_ai_heading">AI 只使用你自己配置的服务</string>
+    <string name="privacy_consent_section_ai_body">生成 AI 日记时，内容只会发送到你自己配置的 AI 大模型服务，不会提供给开发者或其他无关方。</string>
+    <string name="privacy_consent_section_runtime_heading">仅采集运行诊断信息</string>
+    <string name="privacy_consent_section_runtime_body">在你同意后，应用才会启用阿里云移动监控等第三方能力，用于崩溃、性能、网络等运行情况分析，不用于收集你的日记内容。</string>
+    <string name="privacy_consent_policy_link">查看完整隐私政策</string>
+    <string name="privacy_consent_agree_action">同意并继续</string>
+    <string name="privacy_consent_disagree_action">不同意并退出</string>
 </resources>
