@@ -10,6 +10,7 @@ data class RecordEntity(
     val date: String,
     val time: String,
     val content: String,
+    val photoPath: String = "",
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis()
 ) {
@@ -18,6 +19,7 @@ data class RecordEntity(
         date = date,
         time = time,
         content = content,
+        photoPath = photoPath,
         createdAt = createdAt,
         updatedAt = updatedAt
     )
@@ -28,6 +30,7 @@ data class RecordEntity(
             date = model.date,
             time = model.time,
             content = model.content,
+            photoPath = model.photoPath,
             createdAt = model.createdAt,
             updatedAt = model.updatedAt
         )

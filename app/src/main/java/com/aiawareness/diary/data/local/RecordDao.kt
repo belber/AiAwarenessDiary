@@ -33,4 +33,10 @@ interface RecordDao {
 
     @Query("SELECT * FROM records WHERE id = :id")
     suspend fun getRecordById(id: Long): RecordEntity?
+
+    @Query("SELECT * FROM records ORDER BY date ASC, time ASC, id ASC")
+    suspend fun getAllRecords(): List<RecordEntity>
+
+    @Query("DELETE FROM records WHERE date = :date AND time = :time AND content = :content")
+    suspend fun deleteByFingerprint(date: String, time: String, content: String)
 }

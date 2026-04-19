@@ -20,10 +20,11 @@ fun EditorialSurfaceCard(
         modifier = modifier,
         shape = RoundedCornerShape(JournalTokens.CardRadius),
         color = MaterialTheme.colorScheme.surface,
-        shadowElevation = 2.dp
+        shadowElevation = 0.5.dp,
+        tonalElevation = 0.dp
     ) {
         Column(
-            modifier = Modifier.padding(JournalTokens.ScreenPadding),
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
             content = content
         )
     }

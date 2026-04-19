@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e3e3db",
+                    "primary-container": "#d6e7d7",
+                    "on-error-container": "#6e0a12",
+                    "on-secondary-fixed": "#603328",
+                    "surface-variant": "#e3e3db",
+                    "primary-fixed-dim": "#c8d9c9",
+                    "on-surface": "#31332e",
+                    "error-container": "#fa746f",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#764539",
+                    "secondary-container": "#ffdad2",
+                    "tertiary-dim": "#56524f",
+                    "on-surface-variant": "#5e6059",
+                    "secondary-fixed-dim": "#ffc8bb",
+                    "primary": "#546356",
+                    "secondary-fixed": "#ffdad2",
+                    "inverse-primary": "#e7f8e8",
+                    "secondary-dim": "#77463a",
+                    "on-error": "#fff7f6",
+                    "error": "#a83836",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#7a7b75",
+                    "surface-container-high": "#e9e8e1",
+                    "surface-dim": "#dadad2",
+                    "surface-container": "#efeee7",
+                    "surface-bright": "#fbf9f4",
+                    "tertiary-container": "#ffffff",
+                    "surface-tint": "#546356",
+                    "on-primary-container": "#465549",
+                    "on-tertiary-container": "#66615e",
+                    "on-tertiary-fixed": "#544f4c",
+                    "on-tertiary-fixed-variant": "#716c69",
+                    "on-primary": "#ecfded",
+                    "primary-dim": "#48574b",
+                    "on-secondary": "#fff7f6",
+                    "primary-fixed": "#d6e7d7",
+                    "inverse-surface": "#0e0e0c",
+                    "outline-variant": "#b2b2ab",
+                    "error-dim": "#67040d",
+                    "tertiary-fixed": "#ffffff",
+                    "tertiary": "#635e5b",
+                    "on-primary-fixed-variant": "#505f53",
+                    "on-background": "#31332e",
+                    "surface-container-low": "#f5f4ed",
+                    "secondary": "#855245",
+                    "on-secondary-fixed-variant": "#814e42",
+                    "background": "#fbf9f4",
+                    "on-tertiary": "#fff7f3",
+                    "on-primary-fixed": "#344337",
+                    "tertiary-fixed-dim": "#f7efeb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; }
+      .font-serif { font-family: 'Newsreader', serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Shell -->
+<header class="bg-[#fbf9f4] dark:bg-stone-950 fixed top-0 left-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 -ml-2 rounded-full hover:bg-[#d6e7d7]/50 dark:hover:bg-stone-800 transition-colors duration-300">
+<span class="material-symbols-outlined text-[#546356] dark:text-stone-200">arrow_back</span>
+</button>
+<h1 class="font-serif italic text-3xl text-[#546356] dark:text-stone-200">AI 配置</h1>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="user profile picture" class="w-full h-full object-cover" data-alt="minimalist aesthetic portrait of a person with soft lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr75JSeRbKb8JKPNZdBmytmGhPc6ZhFv7gTfNEZEi9BaJgDH7PDyZZy4z7Oai_0Z_zDSq3rWnHrevwL6QaOUDL0BWTYMzd-K38T6oGNb4p9i5YhQwgz6cmsZq11kWg5ocMDzBKPe4fLj4uJwFJOlBThnw3K5alXqiSM3KAmI373bgQBbWRnrXcAsmKJfTnfjvjPflnFWK1g3WwjVQcDdn38TGgqG09lvKyg7CQDSmgPWISxYMKGAnNZ6LwCx83TUSSLr3hbRdvzXXY"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full">
+<!-- Decoration for Sanctuary feel -->
+<div class="mb-12 opacity-40">
+<span class="font-serif italic text-lg text-primary tracking-widest block mb-1">Configuration</span>
+<div class="h-px w-12 bg-primary"></div>
+</div>
+<!-- Form Section -->
+<div class="space-y-12">
+<!-- Field: API Endpoint -->
+<div class="group relative">
+<label class="block font-serif italic text-xl text-primary mb-3 transition-all duration-300 group-focus-within:text-secondary">API Endpoint</label>
+<div class="bg-surface-container-low rounded-lg p-4 transition-all duration-300 hover:bg-surface-container-high focus-within:ring-1 focus-within:ring-primary/20">
+<input class="w-full bg-transparent border-none p-0 text-on-surface placeholder-outline focus:ring-0 text-lg font-body" spellcheck="false" type="text" value="https://api.openai.com/v1"/>
+</div>
+</div>
+<!-- Field: API Key -->
+<div class="group relative">
+<label class="block font-serif italic text-xl text-primary mb-3 transition-all duration-300 group-focus-within:text-secondary">API Key</label>
+<div class="bg-surface-container-low rounded-lg p-4 flex items-center transition-all duration-300 hover:bg-surface-container-high focus-within:ring-1 focus-within:ring-primary/20">
+<input class="w-full bg-transparent border-none p-0 text-on-surface placeholder-outline focus:ring-0 text-lg font-body tracking-widest" spellcheck="false" type="password" value="sk-1234567890abcdef1234567890abcdef"/>
+<span class="material-symbols-outlined text-outline-variant cursor-pointer ml-2 hover:text-primary transition-colors">visibility_off</span>
+</div>
+</div>
+<!-- Field: 模型名 -->
+<div class="group relative">
+<label class="block font-serif italic text-xl text-primary mb-3 transition-all duration-300 group-focus-within:text-secondary">模型名</label>
+<div class="bg-surface-container-low rounded-lg p-4 transition-all duration-300 hover:bg-surface-container-high focus-within:ring-1 focus-within:ring-primary/20">
+<input class="w-full bg-transparent border-none p-0 text-on-surface placeholder-outline focus:ring-0 text-lg font-body" spellcheck="false" type="text" value="gpt-4o"/>
+</div>
+</div>
+</div>
+<!-- Visual Anchor / Background element -->
+<div class="mt-20 flex justify-center">
+<div class="w-32 h-32 rounded-full opacity-10 blur-3xl bg-primary absolute -z-10"></div>
+</div>
+</main>
+<!-- Fixed Action Button at Bottom -->
+<div class="fixed bottom-0 left-0 w-full p-8 flex justify-center pointer-events-none">
+<div class="w-full max-w-md pointer-events-auto">
+<button class="w-full py-5 px-10 rounded-full bg-primary text-on-primary text-xl font-body shadow-[0_12px_40px_rgba(49,51,46,0.15)] hover:bg-primary-dim active:scale-[0.98] transition-all duration-300 ease-in-out flex justify-center items-center gap-3 group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform duration-300">verified</span>
+                测试并保存
+            </button>
+</div>
+</div>
+<!-- Bottom Navigation Shell (Contextually hidden/minimized for focused form task, but keeping the structure as per system requirements) -->
+<nav class="hidden">
+<!-- Navigation suppressed for task-focused AI configuration screen -->
+</nav>
+<!-- Background texture simulation -->
+<div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+</body></html>

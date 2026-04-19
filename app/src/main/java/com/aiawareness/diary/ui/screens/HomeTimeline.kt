@@ -7,7 +7,7 @@ data class HomeTimelineSection(
     val records: List<Record>
 )
 
-private val HomeTimelineOrder = listOf("清晨", "上午", "下午", "傍晚", "夜晚")
+private val HomeTimelineOrder = listOf("清晨", "上午", "下午", "夜晚")
 
 fun buildHomeTimelineSections(records: List<Record>): List<HomeTimelineSection> {
     val grouped = records
@@ -26,7 +26,6 @@ fun homePeriodLabel(time: String): String {
         in 0..8 -> "清晨"
         in 9..11 -> "上午"
         in 12..17 -> "下午"
-        in 18..20 -> "傍晚"
         else -> "夜晚"
     }
 }

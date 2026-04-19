@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e3e3db",
+                    "primary-container": "#d6e7d7",
+                    "on-error-container": "#6e0a12",
+                    "on-secondary-fixed": "#603328",
+                    "surface-variant": "#e3e3db",
+                    "primary-fixed-dim": "#c8d9c9",
+                    "on-surface": "#31332e",
+                    "error-container": "#fa746f",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#764539",
+                    "secondary-container": "#ffdad2",
+                    "tertiary-dim": "#56524f",
+                    "on-surface-variant": "#5e6059",
+                    "secondary-fixed-dim": "#ffc8bb",
+                    "primary": "#546356",
+                    "secondary-fixed": "#ffdad2",
+                    "inverse-primary": "#e7f8e8",
+                    "secondary-dim": "#77463a",
+                    "on-error": "#fff7f6",
+                    "error": "#a83836",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#7a7b75",
+                    "surface-container-high": "#e9e8e1",
+                    "surface-dim": "#dadad2",
+                    "surface-container": "#efeee7",
+                    "surface-bright": "#fbf9f4",
+                    "tertiary-container": "#ffffff",
+                    "surface-tint": "#546356",
+                    "on-primary-container": "#465549",
+                    "on-tertiary-container": "#66615e",
+                    "on-tertiary-fixed": "#544f4c",
+                    "on-tertiary-fixed-variant": "#716c69",
+                    "on-primary": "#ecfded",
+                    "primary-dim": "#48574b",
+                    "on-secondary": "#fff7f6",
+                    "primary-fixed": "#d6e7d7",
+                    "inverse-surface": "#0e0e0c",
+                    "outline-variant": "#b2b2ab",
+                    "error-dim": "#67040d",
+                    "tertiary-fixed": "#ffffff",
+                    "tertiary": "#635e5b",
+                    "on-primary-fixed-variant": "#505f53",
+                    "on-background": "#31332e",
+                    "surface-container-low": "#f5f4ed",
+                    "secondary": "#855245",
+                    "on-secondary-fixed-variant": "#814e42",
+                    "background": "#fbf9f4",
+                    "on-tertiary": "#fff7f3",
+                    "on-primary-fixed": "#344337",
+                    "tertiary-fixed-dim": "#f7efeb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Top AppBar -->
+<nav class="bg-[#fbf9f4] dark:bg-stone-950 docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-[#546356] dark:text-stone-200 hover:bg-[#d6e7d7]/50 dark:hover:bg-stone-800 p-2 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-serif-italic text-3xl text-[#546356] dark:text-stone-200">设置</h1>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden ring-2 ring-surface">
+<img alt="user profile picture" class="w-full h-full object-cover" data-alt="Soft focused portrait of a calm person with natural lighting and a warm, organic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASuBEkiIB0LdAo1SxyOhE7aGoglNkWBVcuVN5wi6Tc3KDSOAxAdab2E9D8OjKfgtg8xffiQPS6sgvI2VsYD7qMVjWp8-5IuIeMVa_FpeR8C_pFR8nvrAaEU2WimntvcVQWGXqJDgAu1zrrqguxFHb6_kSgDkzn_yN6GsHbhExxuZaMuVtOjRSlY995nvn5Nf_oUtr-6DuSr_OT3ddvGhqeB9M8d2naoxR2zNLUPX2Fa3IUu2P6y3QH33cqEUpQIqbtg1405IXCil6Q"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-2xl mx-auto px-6 pt-8 pb-32">
+<!-- Personal Area -->
+<section class="mb-12 text-center md:text-left md:flex md:items-center md:gap-8">
+<div class="relative inline-block group mx-auto md:mx-0">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] bg-surface-container-high overflow-hidden shadow-[0_20px_50px_rgba(49,51,46,0.08)]">
+<img alt="Avatar Large" class="w-full h-full object-cover" data-alt="Cinematic close-up portrait of a woman with gentle expression, soft natural window light, muted earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBDyf0TLzuZFfW12drhfX5LZkJw7R61BTn3y6UbKWfD-yonpxKByNGv_-leg_J_zUloabhHtmWjdfeExpPr9oZe42LfUADOr5pIu4pmltFRrEc2ZfaeXONZsrgmzEXcSgdzQoRr5FB9uQB_qFc97-M6XUizST8hXI2u9Ym8U-oCXStEMu27PaDy2n1QvZ6N4p57D7UyUwJqGNmuB4WQAr8Eqg4f0WL5BuK25JUq6D1Cz6zVO9mEEwsdxoxcxK4CKDyvKDWwwN-0_k6"/>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary text-on-primary p-3 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="mt-6 md:mt-0 flex flex-col gap-2">
+<h2 class="font-serif-italic text-4xl text-on-surface tracking-tight">林间</h2>
+<div class="group flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<p class="font-body text-lg italic opacity-80">“回到呼吸，也回到自己”</p>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">edit_note</span>
+</div>
+</div>
+</section>
+<!-- Menu List Grouped -->
+<div class="space-y-12">
+<!-- Group: Account & Profile -->
+<div class="space-y-2">
+<h3 class="px-4 text-[11px] font-bold tracking-[0.2em] text-outline uppercase opacity-60">账户概览</h3>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300">
+<a class="group flex items-center justify-between px-6 py-5 hover:bg-surface-container-low transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-tertiary group-hover:bg-primary-container group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-on-surface font-medium">个人信息</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Group: AI Settings -->
+<div class="space-y-2">
+<h3 class="px-4 text-[11px] font-bold tracking-[0.2em] text-outline uppercase opacity-60">智慧陪伴</h3>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden">
+<a class="group flex items-center justify-between px-6 py-5 border-b border-surface-container/50 hover:bg-surface-container-low transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-tertiary group-hover:bg-primary-container group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">AI 配置</span>
+<span class="text-[12px] text-on-surface-variant/70">自定义您的 AI 语气与共情深度</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<div class="group flex items-center justify-between px-6 py-5 hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-tertiary group-hover:bg-primary-container group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">AI日记生成时间</span>
+<span class="text-[12px] text-on-surface-variant/70">每日 22:00 自动汇总结语</span>
+</div>
+</div>
+<span class="text-primary font-bold text-sm bg-primary-container/30 px-3 py-1 rounded-full">22:00</span>
+</div>
+</div>
+</div>
+<!-- Group: Data & Security -->
+<div class="space-y-2">
+<h3 class="px-4 text-[11px] font-bold tracking-[0.2em] text-outline uppercase opacity-60">数据与隐私</h3>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden">
+<a class="group flex items-center justify-between px-6 py-5 border-b border-surface-container/50 hover:bg-surface-container-low transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-tertiary group-hover:bg-primary-container group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">database</span>
+</div>
+<span class="text-on-surface font-medium">数据管理</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between px-6 py-5 hover:bg-surface-container-low transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-tertiary group-hover:bg-primary-container group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">info</span>
+</div>
+<span class="text-on-surface font-medium">关于</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[12px] text-outline-variant">Version 1.2.4</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Footer Text Section -->
+<div class="mt-16 flex flex-col items-center gap-6">
+<p class="text-[11px] text-outline-variant tracking-widest text-center">
+            CREATED WITH MINDFULNESS BY AI AWARENESS TEAM<br/>
+            © 2024 THE DIGITAL SANCTUARY
+        </p>
+</div>
+</main>
+</body></html>

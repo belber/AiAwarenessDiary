@@ -14,32 +14,32 @@ import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
     primary = JournalTokens.Sage,
-    onPrimary = Color(0xFFECFDED),
+    onPrimary = Color.White,
     primaryContainer = JournalTokens.SageContainer,
-    onPrimaryContainer = Color(0xFF465549),
-    secondary = JournalTokens.Clay,
-    onSecondary = Color(0xFFFFF7F6),
+    onPrimaryContainer = JournalTokens.SageDim,
+    secondary = JournalTokens.Stone,
+    onSecondary = Color.White,
     secondaryContainer = JournalTokens.ClayContainer,
     background = JournalTokens.Paper,
-    surface = Color.White,
+    surface = JournalTokens.SurfaceLow,
     onBackground = JournalTokens.Ink,
     onSurface = JournalTokens.Ink,
     error = Error
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = JournalTokens.SageContainer,
-    onPrimary = JournalTokens.SageDim,
+    primary = JournalTokens.Sage,
+    onPrimary = Color.White,
     primaryContainer = JournalTokens.Sage,
-    onPrimaryContainer = Color(0xFFECFDED),
-    secondary = JournalTokens.ClayContainer,
-    onSecondary = JournalTokens.Clay,
-    secondaryContainer = JournalTokens.Clay,
-    onSecondaryContainer = Color(0xFFFFF7F6),
-    background = JournalTokens.Ink,
-    surface = JournalTokens.SageDim,
-    onBackground = JournalTokens.Paper,
-    onSurface = JournalTokens.Paper,
+    onPrimaryContainer = Color.White,
+    secondary = JournalTokens.Clay,
+    onSecondary = Color.White,
+    secondaryContainer = JournalTokens.Stone,
+    onSecondaryContainer = Color.White,
+    background = Color(0xFF101721),
+    surface = Color(0xFF172130),
+    onBackground = Color(0xFFEAF0FA),
+    onSurface = Color(0xFFEAF0FA),
     error = Error
 )
 
@@ -54,7 +54,7 @@ fun AiAwarenessDiaryTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
+            window.statusBarColor = Color.Transparent.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }

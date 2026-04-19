@@ -27,3 +27,5 @@
 -keep class * extends androidx.room.RoomDatabase
 -keep @androidx.room.Entity class *
 -dontwarn androidx.room.paging.**
+
+-keep class com.aliyun.emas.apm.**{*;}

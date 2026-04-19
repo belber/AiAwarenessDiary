@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#7a7b75",
+                    "tertiary-fixed": "#ffffff",
+                    "on-tertiary-fixed": "#544f4c",
+                    "on-secondary-fixed": "#603328",
+                    "background": "#fbf9f4",
+                    "on-secondary-fixed-variant": "#814e42",
+                    "on-tertiary-container": "#66615e",
+                    "on-background": "#31332e",
+                    "on-error": "#fff7f6",
+                    "on-surface-variant": "#5e6059",
+                    "on-primary": "#ecfded",
+                    "surface-variant": "#e3e3db",
+                    "error-container": "#fa746f",
+                    "tertiary-container": "#ffffff",
+                    "secondary-fixed": "#ffdad2",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-bright": "#fbf9f4",
+                    "surface-container": "#efeee7",
+                    "on-primary-container": "#465549",
+                    "inverse-surface": "#0e0e0c",
+                    "surface-tint": "#546356",
+                    "surface-container-low": "#f5f4ed",
+                    "tertiary-fixed-dim": "#f7efeb",
+                    "on-tertiary-fixed-variant": "#716c69",
+                    "secondary-fixed-dim": "#ffc8bb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d6e7d7",
+                    "error": "#a83836",
+                    "error-dim": "#67040d",
+                    "surface": "#fbf9f4",
+                    "inverse-primary": "#e7f8e8",
+                    "surface-container-highest": "#e3e3db",
+                    "primary": "#546356",
+                    "surface-dim": "#dadad2",
+                    "secondary-container": "#ffdad2",
+                    "primary-fixed-dim": "#c8d9c9",
+                    "on-secondary-container": "#764539",
+                    "on-primary-fixed": "#344337",
+                    "tertiary-dim": "#56524f",
+                    "surface-container-high": "#e9e8e1",
+                    "secondary": "#855245",
+                    "on-surface": "#31332e",
+                    "on-primary-fixed-variant": "#505f53",
+                    "secondary-dim": "#77463a",
+                    "outline-variant": "#b2b2ab",
+                    "primary-dim": "#48574b",
+                    "tertiary": "#635e5b",
+                    "on-secondary": "#fff7f6",
+                    "primary-container": "#d6e7d7",
+                    "on-tertiary": "#fff7f3",
+                    "on-error-container": "#6e0a12"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fbf9f4;
+            color: #31332e;
+        }
+        .serif-text {
+            font-family: 'Newsreader', serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex items-center px-6 py-4 w-full h-20 bg-gradient-to-b from-[#fbf9f4] to-transparent">
+<div class="flex items-center space-x-4">
+<button class="hover:opacity-70 transition-opacity duration-300 text-[#546356] dark:text-[#d6e7d7]">
+<span class="material-symbols-outlined text-3xl" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Newsreader'] italic text-2xl tracking-tight text-[#546356] dark:text-[#d6e7d7]">个人信息</h1>
+</div>
+</nav>
+<!-- Content Canvas -->
+<main class="pt-28 pb-12 px-8 max-w-2xl mx-auto">
+<!-- Hero/Avatar Section -->
+<section class="flex flex-col items-center mb-16">
+<div class="relative group cursor-pointer">
+<!-- Outer glow/halo for zen feel -->
+<div class="absolute -inset-4 bg-primary-container/20 rounded-full blur-2xl transition-all duration-700 group-hover:bg-primary-container/40"></div>
+<!-- Main Avatar -->
+<div class="relative w-40 h-40 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-sm">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Soft-focus portrait of a calm person in a minimalist natural setting with warm, ethereal lighting and organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2BLhhBk50Lw12qz_E9AxgRaXVo8wnDoeLc44O9Kx7KxV2VqVzvCEjtTWnUp0JCgP-4ftyeE0ttHxVL9Q6sPiha1WeUdg97NOGW_v9auLAtNpuJh2xpfSbiwsmqOs11dCpNIOVFwXyW_OkSTDWrVwgor-xLIaQEQKeFahlhc_T3VvXspscVqUng_aKPKdEsh1w4ty73xnwuZWWKQSnBegwB4MCQeOuJCI9XpFSIqGP18ZJxw2qAX7Pp7Oj67IsopcZgBK9Zga6BPxu"/>
+<!-- Overlay for editing -->
+<div class="absolute inset-0 bg-on-background/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px]">
+<div class="bg-surface-container-lowest/80 p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-icon="photo_camera">photo_camera</span>
+</div>
+</div>
+</div>
+<!-- Floating Edit Badge -->
+<button class="absolute bottom-2 right-2 bg-primary text-on-primary p-2.5 rounded-full shadow-md transform hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="edit" data-weight="fill" style="font-variation-settings: 'FILL' 1;">edit</span>
+</button>
+</div>
+<p class="mt-6 text-on-surface-variant font-label text-xs tracking-widest uppercase">点击更换头像</p>
+</section>
+<!-- Form Section -->
+<section class="space-y-12">
+<!-- Nickname Input -->
+<div class="group">
+<label class="block text-on-surface-variant font-label text-sm mb-2 transition-all group-focus-within:text-primary group-focus-within:translate-x-1" for="nickname">
+                    昵称
+                </label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 font-headline italic text-3xl text-on-background focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant" id="nickname" placeholder="输入你的昵称" type="text" value="林间听风"/>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</div>
+</div>
+</div>
+<!-- Bio/Spiritual Quote (Asymmetric Layout Element) -->
+<div class="bg-surface-container-low rounded-lg p-8 ml-4 border-l-2 border-primary/20">
+<label class="block text-on-surface-variant font-label text-sm mb-4">
+                    觉察寄语
+                </label>
+<textarea class="w-full bg-transparent border-0 p-0 font-body text-lg leading-relaxed text-on-surface-variant focus:ring-0 resize-none min-h-[100px]" placeholder="在这里记录下你当下的心境...">万物静默，唯有呼吸在指引归途。在这个数字乐园里，我寻找片刻的宁静。 </textarea>
+</div>
+<!-- Secondary Info Grid (Bento Style) -->
+<div class="grid grid-cols-1 gap-4 max-w-md mx-auto">
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_4px_20px_rgba(49,51,46,0.02)] flex flex-col justify-between h-32">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant/60 font-label">觉察天数</span>
+<span class="font-headline text-4xl text-primary">128 <span class="text-sm font-body italic text-on-surface-variant/40">Days</span></span>
+</div>
+</div>
+</section>
+<!-- Footer Note -->
+<footer class="mt-20 text-center">
+<div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-surface-container-high/40">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/50" data-icon="cloud_done">cloud_done</span>
+<span class="text-xs text-on-surface-variant/60 font-body tracking-tight">修改将自动保存</span>
+</div>
+<div class="mt-12 flex justify-center space-x-6">
+<a class="text-xs text-on-surface-variant/40 hover:text-primary transition-colors" href="#">隐私条款</a>
+<a class="text-xs text-on-surface-variant/40 hover:text-primary transition-colors" href="#">账号注销</a>
+</div>
+</footer>
+</main>
+<!-- Decoration: Subtle floating organic shape -->
+<div class="fixed top-[15%] -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-0 -left-20 w-96 h-96 bg-secondary-container/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+</body></html>

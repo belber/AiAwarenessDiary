@@ -5,6 +5,7 @@ data class Record(
     val date: String,
     val time: String,
     val content: String,
+    val photoPath: String = "",
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis()
 )

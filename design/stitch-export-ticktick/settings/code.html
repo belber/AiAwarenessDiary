@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c3c5d6",
+                        "surface-container": "#edeef0",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-low": "#f3f4f6",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "tertiary-container": "#b65c00",
+                        "on-primary-container": "#fefbff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#00174d",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#364573",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-tertiary-fixed": "#301400",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#b9c7fe",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary-container": "#406ce7",
+                        "on-surface": "#191c1e",
+                        "primary-fixed": "#dbe1ff",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e2e4",
+                        "tertiary": "#914800",
+                        "on-secondary-fixed": "#071845",
+                        "surface-container-high": "#e7e8ea",
+                        "tertiary-fixed-dim": "#ffb785",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b6c5fb",
+                        "on-surface-variant": "#434654",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2254cf",
+                        "background": "#f8f9fb",
+                        "surface": "#f8f9fb",
+                        "secondary": "#4e5c8c",
+                        "inverse-primary": "#b5c4ff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-fixed-variant": "#003cac",
+                        "primary": "#1e52cc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-scale:active { transform: scale(0.98); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 bg-[#f8f9fb] z-40">
+<div class="flex justify-between items-center px-6 py-4 max-w-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors active-scale">
+                    arrow_back
+                </button>
+<h1 class="text-xl font-bold text-[#191c1e] tracking-tight">Settings</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#1e52cc]">edit_note</span>
+</div>
+</div>
+</header>
+<main class="max-w-2xl mx-auto pb-12">
+<!-- Profile Section -->
+<section class="px-6 py-8 flex flex-col items-center">
+<div class="relative mb-4 group">
+<img alt="User Profile" class="w-24 h-24 rounded-full object-cover border-4 border-surface-container shadow-sm" data-alt="Close-up portrait of a professional man with a friendly expression in clean minimalist studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkMqT3ATH6WhANyadJI4yb2pq7X2P5xQGqOYTr5XfnFzNNelihlvC9Y-0PuL-MlyVk-dkdubAEXwbQsNMUUQ4GuYbUoUug1LXIu1FiuMbMVpleOhPViciMQmGWW6BFZGzkS_srVs30HVhTcm1IbXxs4htGbUpYUeAC6f43yK7tNRkmiQZQuAjN_ZZDQhREBzxBWBPkKz_lf49JGNNzxTv0rSDh7XkVPnCZkwx9ahCotnY5gPIwKG5ggB0VTbt0rFCg8-nZRFfQAOE0"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-1.5 rounded-full shadow-lg active-scale">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</button>
+</div>
+<h2 class="text-lg font-bold text-on-surface tracking-tight">Daily Curator</h2>
+<div class="mt-1 flex items-center gap-2 px-4 py-1 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="text-sm text-on-surface-variant font-medium italic">"Mapping the digital soul..."</span>
+<span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">edit</span>
+</div>
+</section>
+<!-- Settings List -->
+<div class="px-4 space-y-2">
+<!-- Category: Account -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- Personal Info -->
+<button class="w-full flex items-center justify-between px-5 py-4 hover:bg-surface-container-low transition-colors active-scale text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">Personal Info</p>
+<p class="text-[11px] text-on-surface-variant font-medium">Profile, email, and security</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</button>
+<!-- AI Config -->
+<button class="w-full flex items-center justify-between px-5 py-4 hover:bg-surface-container-low transition-colors active-scale text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">AI Config</p>
+<p class="text-[11px] text-on-surface-variant font-medium">Neural settings and awareness level</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</button>
+</div>
+<!-- Category: Schedule & Data -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- AI Diary Time -->
+<button class="w-full flex items-center justify-between px-5 py-4 hover:bg-surface-container-low transition-colors active-scale text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">AI Diary Time</p>
+<p class="text-[11px] text-on-surface-variant font-medium">Daily reflection window at 21:00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</button>
+<!-- Data Management -->
+<button class="w-full flex items-center justify-between px-5 py-4 hover:bg-surface-container-low transition-colors active-scale text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">database</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">Data Management</p>
+<p class="text-[11px] text-on-surface-variant font-medium">Export, backup, and privacy</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</button>
+</div>
+<!-- Category: Info -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- About -->
+<button class="w-full flex items-center justify-between px-5 py-4 hover:bg-surface-container-low transition-colors active-scale text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">About</p>
+<p class="text-[11px] text-on-surface-variant font-medium">AI Awareness Diary v1.0.4</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Footer Branding -->
+<footer class="mt-12 px-6 text-center">
+<div class="inline-flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+<span class="font-bold text-on-surface text-sm tracking-tight">AI Awareness Diary</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold opacity-40">Precision Architect System</p>
+</footer>
+</main>
+<!-- Side Decoration (Web Only) -->
+<div class="hidden md:block fixed right-12 top-1/2 -translate-y-1/2 w-48 space-y-4 pointer-events-none opacity-20">
+<div class="h-1 bg-primary w-full rounded-full"></div>
+<div class="h-1 bg-surface-container-highest w-3/4 rounded-full"></div>
+<div class="h-1 bg-surface-container-highest w-1/2 rounded-full"></div>
+</div>
+</body></html>

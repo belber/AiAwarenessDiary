@@ -16,10 +16,10 @@ interface DiaryDao {
     @Update
     suspend fun update(diary: DiaryEntity)
 
-    @Query("SELECT * FROM diaries WHERE date = :date")
+    @Query("SELECT * FROM diaries WHERE date = :date ORDER BY updatedAt DESC, id DESC LIMIT 1")
     suspend fun getDiaryByDate(date: String): DiaryEntity?
 
-    @Query("SELECT * FROM diaries WHERE date = :date")
+    @Query("SELECT * FROM diaries WHERE date = :date ORDER BY updatedAt DESC, id DESC LIMIT 1")
     fun getDiaryByDateFlow(date: String): Flow<DiaryEntity?>
 
     @Query("DELETE FROM diaries WHERE date = :date")
@@ -27,4 +27,7 @@ interface DiaryDao {
 
     @Query("SELECT EXISTS(SELECT 1 FROM diaries WHERE date = :date)")
     suspend fun existsByDate(date: String): Boolean
+
+    @Query("SELECT * FROM diaries ORDER BY date ASC, updatedAt ASC, id ASC")
+    suspend fun getAllDiaries(): List<DiaryEntity>
 }

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AI觉察日记</string>
+    <string name="app_name">AI日记本</string>
     <string name="tab_awareness">觉察</string>
     <string name="tab_review">回顾</string>
     <string name="tab_settings">设置</string>
     <string name="prompt_placeholder">此刻，你在想什么？</string>
     <string name="save">保存</string>
     <string name="today_records">今日已记录 %d 次</string>
+    <string name="privacy_policy_title">隐私政策</string>
+    <string name="privacy_policy_url">https://belber.github.io/AiAwarenessDiary/privacy-policy/</string>
+    <string name="privacy_policy_about_entry_title">查看隐私政策</string>
+    <string name="privacy_policy_about_entry_subtitle">了解本地存储、第三方服务传输与监控说明</string>
+    <string name="privacy_policy_fallback_reason_no_url">当前尚未配置线上隐私政策链接，以下为应用内置版本。</string>
+    <string name="privacy_policy_fallback_reason_load_failed">线上隐私政策加载失败，以下为应用内置版本。</string>
+    <string name="privacy_policy_consent_message">继续使用前，请先阅读并同意隐私政策。应用会在你同意后启用 Aliyun APM 监控；如果你配置第三方 AI 或对象存储服务，所选数据也会直接发送到相应服务。</string>
+    <string name="privacy_policy_view_action">查看隐私政策</string>
+    <string name="privacy_policy_agree_action">同意并继续</string>
+    <string name="privacy_policy_disagree_action">不同意并退出</string>
 </resources>

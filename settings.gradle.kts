@@ -3,6 +3,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://maven.aliyun.com/nexus/content/repositories/releases/") }
     }
 }
 
@@ -11,6 +12,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://maven.aliyun.com/nexus/content/repositories/releases/") }
     }
 }
 
