@@ -11,10 +11,43 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.cancel
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class UserPreferencesTest {
+
+    @Test
+    fun userSettings_defaultsAiEndpointAndModelWhenUnset() = runBlocking {
+        val preferences = createUserPreferences()
+
+        try {
+            val settings = preferences.userPreferences.userSettings.first()
+
+            assertEquals("https://dashscope.aliyuncs.com/compatible-mode/v1", settings.apiEndpoint)
+            assertEquals("qwen-turbo-latest", settings.modelName)
+        } finally {
+            preferences.close()
+            deleteBackingFile(preferences.backingFile)
+        }
+    }
+
+    @Test
+    fun userSettings_fallsBackToDefaultsWhenBlankValuesWerePersisted() = runBlocking {
+        val preferences = createUserPreferences()
+
+        try {
+            preferences.userPreferences.updateApiConfig(endpoint = "", apiKey = "", modelName = "")
+
+            val settings = preferences.userPreferences.userSettings.first()
+
+            assertEquals("https://dashscope.aliyuncs.com/compatible-mode/v1", settings.apiEndpoint)
+            assertEquals("qwen-turbo-latest", settings.modelName)
+        } finally {
+            preferences.close()
+            deleteBackingFile(preferences.backingFile)
+        }
+    }
 
     @Test
     fun isPrivacyPolicyAccepted_defaultsToFalse() = runBlocking {

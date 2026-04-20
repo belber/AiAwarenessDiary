@@ -6,14 +6,12 @@
     <title>AI日记本隐私政策</title>
     <style>
         :root {
-            --paper: #f4efe4;
-            --card: rgba(255, 252, 246, 0.9);
-            --ink: #1f1a17;
-            --muted: #6f655d;
-            --line: rgba(73, 58, 45, 0.14);
-            --accent: #c96d52;
-            --accent-soft: rgba(201, 109, 82, 0.12);
-            --shadow: 0 24px 60px rgba(59, 41, 28, 0.12);
+            --paper: #ffffff;
+            --surface: #ffffff;
+            --ink: #111111;
+            --muted: #555555;
+            --line: #d9d9d9;
+            --accent: #202020;
         }
 
         * {
@@ -22,50 +20,47 @@
 
         body {
             margin: 0;
-            font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+            font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
             color: var(--ink);
-            background:
-                radial-gradient(circle at top, rgba(201, 109, 82, 0.18), transparent 32%),
-                linear-gradient(180deg, #f7f2e9 0%, var(--paper) 100%);
+            background: var(--paper);
             line-height: 1.75;
         }
 
         main {
-            width: min(920px, calc(100vw - 32px));
+            width: min(960px, calc(100vw - 48px));
             margin: 0 auto;
-            padding: 48px 0 80px;
+            padding: 40px 0 72px;
         }
 
         .hero,
         .content {
-            background: var(--card);
+            background: var(--surface);
             border: 1px solid var(--line);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(14px);
         }
 
         .hero {
-            border-radius: 28px;
-            padding: 40px 32px 28px;
-            margin-bottom: 20px;
+            border-radius: 0;
+            border-top: 4px solid var(--accent);
+            padding: 32px 32px 24px;
+            margin-bottom: 16px;
         }
 
         .eyebrow {
             display: inline-block;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: var(--accent-soft);
+            padding: 0;
+            border-radius: 0;
             color: var(--accent);
             font-size: 12px;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         h1 {
             margin: 18px 0 10px;
-            font-size: clamp(32px, 6vw, 54px);
-            line-height: 1.12;
-            font-weight: 600;
+            font-size: clamp(30px, 5vw, 44px);
+            line-height: 1.2;
+            font-weight: 700;
         }
 
         .lead,
@@ -79,8 +74,8 @@
         }
 
         .content {
-            border-radius: 24px;
-            padding: 16px 24px 28px;
+            border-radius: 0;
+            padding: 12px 28px 24px;
         }
 
         section {
@@ -95,8 +90,9 @@
 
         h2 {
             margin: 0 0 12px;
-            font-size: 22px;
+            font-size: 21px;
             line-height: 1.35;
+            font-weight: 700;
         }
 
         p,
@@ -119,7 +115,7 @@
         }
 
         .footer {
-            margin-top: 18px;
+            margin-top: 20px;
             text-align: center;
             color: var(--muted);
             font-size: 14px;
@@ -127,22 +123,22 @@
 
         @media (max-width: 640px) {
             main {
-                width: min(100vw - 20px, 920px);
+                width: min(100vw - 24px, 960px);
                 padding-top: 20px;
-                padding-bottom: 48px;
+                padding-bottom: 40px;
             }
 
             .hero,
             .content {
-                border-radius: 20px;
+                border-radius: 0;
             }
 
             .hero {
-                padding: 26px 20px 20px;
+                padding: 24px 20px 18px;
             }
 
             .content {
-                padding: 10px 14px 18px;
+                padding: 8px 16px 16px;
             }
 
             section {

@@ -6,6 +6,8 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import com.aiawareness.diary.data.model.DEFAULT_AI_API_ENDPOINT
+import com.aiawareness.diary.data.model.DEFAULT_AI_MODEL_NAME
 import com.aiawareness.diary.data.model.UserSettings
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -39,9 +41,9 @@ class UserPreferences @Inject constructor(
             nickname = prefs[NICKNAME] ?: "",
             avatarPath = prefs[AVATAR_PATH] ?: "",
             profileQuote = prefs[PROFILE_QUOTE] ?: "",
-            apiEndpoint = prefs[API_ENDPOINT] ?: "",
+            apiEndpoint = prefs[API_ENDPOINT].orDefaultIfBlank(DEFAULT_AI_API_ENDPOINT),
             apiKey = prefs[API_KEY] ?: "",
-            modelName = prefs[MODEL_NAME] ?: "qwen-turbo-latest",
+            modelName = prefs[MODEL_NAME].orDefaultIfBlank(DEFAULT_AI_MODEL_NAME),
             diaryGenerationHour = prefs[DIARY_GEN_HOUR] ?: 22,
             diaryGenerationMinute = prefs[DIARY_GEN_MINUTE] ?: 0,
             s3Endpoint = prefs[S3_ENDPOINT] ?: "",
@@ -128,4 +130,7 @@ class UserPreferences @Inject constructor(
             prefs[S3_AUTO_SYNC] = settings.s3AutoSync
         }
     }
+
+    private fun String?.orDefaultIfBlank(defaultValue: String): String =
+        this?.takeIf { it.isNotBlank() } ?: defaultValue
 }

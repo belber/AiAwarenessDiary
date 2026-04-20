@@ -11,7 +11,15 @@ class UserSettingsTest {
     }
 
     @Test
-    fun defaultModelName_startsBlank() {
-        assertEquals("", UserSettings().modelName)
+    fun defaultApiEndpoint_matchesDashScopeCompatibleEndpoint() {
+        assertEquals(
+            "https://dashscope.aliyuncs.com/compatible-mode/v1",
+            UserSettings().apiEndpoint
+        )
+    }
+
+    @Test
+    fun defaultModelName_matchesDashScopeTurboLatest() {
+        assertEquals("qwen-turbo-latest", UserSettings().modelName)
     }
 }

@@ -26,6 +26,10 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 
+internal fun photoPreviewContainerColor(): Color = Color.Transparent
+
+internal fun photoPreviewImageContentScale(): ContentScale = ContentScale.Fit
+
 @Composable
 fun PhotoPreviewDialog(
     photoPath: String,
@@ -48,7 +52,7 @@ fun PhotoPreviewDialog(
                     .padding(horizontal = 20.dp, vertical = 28.dp)
                     .clickable(onClick = {}),
                 shape = RoundedCornerShape(28.dp),
-                color = Color(0xFFF8F8F6),
+                color = photoPreviewContainerColor(),
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp
             ) {
@@ -58,7 +62,7 @@ fun PhotoPreviewDialog(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(28.dp)),
-                    contentScale = ContentScale.Fit
+                    contentScale = photoPreviewImageContentScale()
                 )
             }
 
